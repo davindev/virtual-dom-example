@@ -1,3 +1,6 @@
+/** @jsx createElement */
+import { createElement } from './utils';
+
 const vm = (
   <div>
     <button type="button">
