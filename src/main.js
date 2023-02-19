@@ -1,7 +1,7 @@
 /** @jsx createElement */
-import { createElement } from './utils';
+import { createElement, createVirtualDOM } from './utils';
 
-const vm = (
+const vm = createVirtualDOM(
   <div>
     <button type="button">
       -
