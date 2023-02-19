@@ -1,14 +1,37 @@
 /** @jsx createElement */
-import { createElement, createVirtualDOM } from './utils';
+import { createElement, updateElement } from './utils';
+import { OLD_LIST, NEW_LIST } from './constants';
 
-const vm = createVirtualDOM(
+const render = (state) => (
   <div>
-    <button type="button">
-      -
-    </button>
-    0
-    <button type="button">
-      +
+    <ul>
+      {state.map((item) => <li>{item}</li>)}
+    </ul>
+    <button
+      type="button"
+      aria-label="Add"
+    >
+      Add
     </button>
   </div>
 );
+
+const oldNode = render(OLD_LIST);
+const newNode = render(NEW_LIST);
+const $root = document.querySelector('#root');
+
+updateElement({
+  parentNode: $root,
+  newNode: oldNode,
+});
+
+const handleClickAddButton = () => {
+  updateElement({
+    parentNode: $root,
+    oldNode,
+    newNode,
+  });
+};
+
+const $button = document.querySelector('[aria-label="Add"]');
+$button.onclick = handleClickAddButton;
