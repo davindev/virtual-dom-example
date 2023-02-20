@@ -1,4 +1,4 @@
-import { createVirtualDOM } from './createVirtualDOM'
+import { createVirtualDOM } from './createVirtualDOM';
 
 export function updateElement({ parentNode, oldNode, newNode, index = 0 }) {
   // 노드가 새로 추가된 경우 부모 노드 아래에 추가한다.
