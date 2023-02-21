@@ -1,5 +1,5 @@
-/** @jsx createElement */
-import { createElement, updateElement } from './utils';
+/** @jsx createVirtualDOM */
+import { createVirtualDOM, updateElement } from './utils';
 import { OLD_LIST, NEW_LIST } from './constants';
 
 const render = (state) => (
@@ -16,20 +16,20 @@ const render = (state) => (
   </div>
 );
 
-const oldNode = render(OLD_LIST);
-const newNode = render(NEW_LIST);
+const oldVirtualDOM = render(OLD_LIST);
+const newVirtualDOM = render(NEW_LIST);
 const $root = document.querySelector('#root');
 
 updateElement({
   parentNode: $root,
-  newNode: oldNode,
+  newNode: oldVirtualDOM,
 });
 
 const handleClickAddButton = () => {
   updateElement({
     parentNode: $root,
-    oldNode,
-    newNode,
+    oldNode: oldVirtualDOM,
+    newNode: newVirtualDOM,
   });
 };
 

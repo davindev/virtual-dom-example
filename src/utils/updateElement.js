@@ -1,9 +1,9 @@
-import { createVirtualDOM } from './createVirtualDOM';
+import { createElement } from './createElement';
 
 export function updateElement({ parentNode, oldNode, newNode, index = 0 }) {
   // 노드가 새로 추가된 경우 부모 노드 아래에 추가한다.
   if (!oldNode && newNode) {
-    parentNode?.appendChild(createVirtualDOM(newNode));
+    parentNode?.appendChild(createElement(newNode));
     return;
   }
 
@@ -14,8 +14,8 @@ export function updateElement({ parentNode, oldNode, newNode, index = 0 }) {
   }
 
   // 노드의 type이 다른 경우 새로운 노드로 대체한다.
-  if (oldNode && newNode && (oldNode.type !== newNode.type)) {
-    parentNode?.replaceChild(createVirtualDOM(newNode), parentNode?.childNodes?.[index]);
+  if (oldNode.type !== newNode.type) {
+    parentNode?.replaceChild(createElement(newNode), parentNode?.childNodes?.[index]);
     return;
   }
 
