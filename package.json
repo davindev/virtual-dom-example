@@ -1,5 +1,5 @@
 {
-  "name": "simple-virtual-dom",
+  "name": "vanilla-virtual-dom",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davindev/simple-virtual-dom.git"
+    "url": "git+https://github.com/davindev/vanilla-virtual-dom.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/davindev/simple-virtual-dom/issues"
+    "url": "https://github.com/davindev/vanilla-virtual-dom/issues"
   },
-  "homepage": "https://github.com/davindev/simple-virtual-dom#readme",
+  "homepage": "https://github.com/davindev/vanilla-virtual-dom#readme",
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@babel/plugin-transform-react-jsx": "^7.20.13",

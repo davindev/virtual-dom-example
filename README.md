@@ -4,7 +4,7 @@
 
 아래 명령어를 입력하여 해당 레퍼지토리를 클론 할 수 있습니다.
 ```zsh
-git clone https://github.com/davindev/simple-virtual-dom.git
+git clone https://github.com/davindev/vanilla-virtual-dom.git
 ```
 
 브라우저에서 `index.html` 파일을 열면 동작을 확인할 수 있습니다.
