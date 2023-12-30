@@ -1,4 +1,4 @@
-# Virtual DOM 만들기
+# 바닐라 자바스크립트로 Virtual DOM 만들기
 
 [바닐라 자바스크립트로 Virtual DOM 만들기](https://velog.io/@davin/Virtual-DOM-%EB%A7%8C%EB%93%A4%EA%B8%B0) 아티클에서 사용된 실습 코드 레퍼지토리 입니다.
 
